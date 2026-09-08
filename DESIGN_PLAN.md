@@ -360,12 +360,32 @@ Recap video export, year in review.
 | 4 | Domain: keep `smtrvl.vercel.app` or buy a real one | Buy one. Handles in the URL are the product. | Phase 1 |
 | 5 | Migrate existing v1 globes, or let them expire | Migrate. They are the only existing users. | Phase 2 |
 
-### 10.1 Known traps
+### 10.1 Deployment constraints
+
+**The Phase 1 file store is local-only. It cannot run on Vercel.** `lib/store/fileStore.ts`
+writes to `.data/globes/` under `process.cwd()`, and Vercel Functions have a read-only
+filesystem apart from `/tmp`, which is neither shared between invocations nor durable.
+Publishing a globe would fail there. This is by design: the store exists so the MVP runs
+locally with no accounts. **Phase 2 (Supabase) is therefore a hard prerequisite for the
+first real deploy**, not an optional upgrade.
+
+**Two Vercel project settings must change when v2 merges:**
+1. Framework Preset from Create React App to **Next.js** (output directory stops being `build`).
+2. Confirm the Node version is 20 or newer. Next 15 requires 18.18+.
+
+**Why the v1 preview builds fail.** Vercel sets `CI=true`, and `react-scripts build` treats
+every ESLint warning as a fatal error under it. v1 has around 30 warnings, so any branch
+whose root is still the CRA app fails to build regardless of what the commit changed. Not
+worth fixing in v1, since the root becomes a Next.js app in v2. If the noise is unwanted
+before then, restrict deploys to `main` in the Vercel Git settings or use an ignored build
+step.
+
+### 10.2 Known traps
 - **globe.gl ships an inconsistent three.js tree.** In 2.46.2, `three-globe` pins three 0.171 while `three-render-objects` uses 0.186. Objects built by one are passed to the other, which calls `intersectsFrustum`, a method only 0.186 has, and the globe fails to render with a blank canvas. Fixed with an `overrides: { "three": "0.186.0" }` in `package.json`. **Do not remove that override**, and re-check it whenever globe.gl is upgraded.
 - **Satori, which renders the OG card, supports a flexbox subset only.** Any element with more than one child needs an explicit `display`, and an expression next to bare text counts as two children. Keep interpolations in single template literals.
 - **The design textures are gone on purpose.** The globe is a matte sphere plus polygons, not a photographic earth. That removes the `unpkg` runtime dependency v1 had and makes the ember countries the only thing competing for attention.
 
-### 10.2 Local development
+### 10.3 Local development
 - Node 24 via nvm. The machine defaults to Node 17, which no current tooling supports, so the repo carries an `.nvmrc` and `nvm use` is required once per shell.
 - Phase 1 runs with **no external accounts and no Docker**: drafts live in `localStorage`, published globes in a local JSON file store behind a `GlobeStore` interface. Supabase implements the same interface in Phase 2 without touching UI code.
 
@@ -376,4 +396,5 @@ Recap video export, year in review.
 |---|---|
 | 2026-09-08 | Initial plan. Audit of v1, v2 thesis, visual direction, stack, roadmap. |
 | 2026-09-08 | Owner relocated to the UK. Payments decision closed: Stripe direct, no merchant of record. Added local-development constraints. |
-| 2026-09-08 | Phase 0 and most of Phase 1 built. Globe switched from react-globe.gl to vanilla globe.gl. Country key settled on `ADM0_A3`. Known traps recorded in 10.1. |
+| 2026-09-08 | Phase 0 and most of Phase 1 built. Globe switched from react-globe.gl to vanilla globe.gl. Country key settled on `ADM0_A3`. Known traps recorded in 10.2. |
+| 2026-09-08 | Recorded deployment constraints (10.1) after a Vercel preview build failed: the CRA app cannot build under `CI=true`, and the Phase 1 file store cannot run on Vercel, which makes Phase 2 a prerequisite for the first deploy. |
