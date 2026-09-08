@@ -392,9 +392,15 @@ Vercel dropped Node 16 builds, which blocked **every** branch including `main`. 
 could not be redeployed at all, and the live site kept working only because it serves a
 January 2023 build. Both this and the framework preset were corrected on 2026-09-08.
 
-**Still true after the fix:** a deployed v2 cannot publish globes until Phase 2 replaces the
-file store, and `/g/wander` will 404 in any deployment because the seeded example lives in
-gitignored local state.
+**First successful deploy: 2026-09-08**, commit `e48bbab`, at
+`travel-git-worktree-v2-design-plan-kappassovs-projects.vercel.app`. Landing and editor both
+render with the globe and no console errors.
+
+**Confirmed on that deploy, as predicted:** `POST /api/globes` returns **HTTP 500** because
+the file store cannot write on Vercel's read-only filesystem, and `/g/wander` returns 404
+because the seeded example lives in gitignored local state. Publishing and sharing therefore
+do not work in any deployment until Phase 2 replaces the store. Local development is
+unaffected.
 
 **Separately, v1 also cannot compile under CI even once Node is fixed.** Vercel sets
 `CI=true`, and `react-scripts build` treats every ESLint warning as fatal; v1 has around 30.
@@ -424,3 +430,4 @@ Phase 5 requires upgrading to Pro alongside the Stripe work.
 | 2026-09-08 | Owner relocated to the UK. Payments decision closed: Stripe direct, no merchant of record. Added local-development constraints. |
 | 2026-09-08 | Phase 0 and most of Phase 1 built. Globe switched from react-globe.gl to vanilla globe.gl. Country key settled on `ADM0_A3`. Known traps recorded in 10.2. |
 | 2026-09-08 | Recorded deployment constraints (10.1) after a Vercel preview build failed. First diagnosis (`CI=true` plus ESLint) was wrong: the real cause, from the Vercel build log, is that the project is pinned to the discontinued Node 16.x, so builds are rejected before running. Also noted that the Phase 1 file store cannot run on Vercel, that Hobby blocks commercial use, and closed the domain decision. |
+| 2026-09-08 | Node set to 24.x and preset to Next.js, giving the first successful deploy since January 2023. Fixed a `.gitignore` carried from CRA whose bare `build/` pattern silently excluded `app/build/`, so the editor route was missing from the repo and 404ed on the deploy while working locally. |
