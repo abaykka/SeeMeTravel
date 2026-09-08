@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/*
+  See Me Travel v2 design tokens. See DESIGN_PLAN.md section 3.
+  Theme is dark and page-wide locked: a night earth against a lit page reads wrong.
+*/
+@theme {
+  --color-bg: #070a12;
+  --color-surface: #0f1522;
+  --color-surface-hi: #18202f;
+  --color-border: #212c3e;
+  --color-text: #e7ecf3;
+  --color-muted: #93a0b4;
+  --color-accent: #f0a13b;
+  --color-accent-hi: #ffb859;
+  --color-accent-ink: #1a1206;
+  --color-danger: #e5644b;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* One radius system, followed everywhere. Buttons are pill, cards 16px, inputs 8px. */
+  --radius-card: 1rem;
+  --radius-input: 0.5rem;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Visible focus on every interactive element, in the accent. */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* The globe supplies the motion budget. Everything collapses under reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* globe.gl injects a canvas that must not inherit page scroll behaviour. */
+.globe-host canvas {
+  display: block;
+  outline: none;
+}

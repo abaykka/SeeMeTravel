@@ -277,7 +277,7 @@ Freemium. The free tier has to stay genuinely good, because free globes are the 
 
 One-off purchase worth testing later: a physical printed poster, fulfilled by a print-on-demand partner.
 
-**Payments provider.** Stripe does not support Kazakhstan-based sellers. Use a merchant of record: **Paddle**, **Lemon Squeezy**, or **Polar**. This is a hard blocker to resolve before building checkout, so it goes in section 10.
+**Payments provider: Stripe.** Resolved 2026-09-08. The owner is UK-based, so Stripe is available directly and there is no need for a merchant of record. Use Stripe Checkout plus the customer portal for plan management, and a webhook to sync subscription state onto `user.plan`. Note that Stripe is not a merchant of record, so VAT and sales-tax handling is on us; enable **Stripe Tax** when revenue makes it worth it.
 
 ---
 
@@ -290,7 +290,7 @@ One-off purchase worth testing later: a physical printed poster, fulfilled by a 
 | Styling | **Tailwind v4** with CSS-variable tokens | Replaces Bootstrap plus MUI plus emotion plus styled-components with one system. |
 | Motion | **Motion (`motion/react`)** | Isolated in `'use client'` leaves. |
 | Icons | **Phosphor (`@phosphor-icons/react`)**, `weight="regular"` everywhere | Replaces two FontAwesome packages and one CDN link. No hand-rolled SVG. |
-| Globe | **react-globe.gl** in a client leaf, textures self-hosted | It already works and the interaction is good. Lazy-load it; it is the largest bundle on the page. |
+| Globe | **globe.gl** (vanilla) in a client leaf | Changed from react-globe.gl during Phase 0: the React wrapper has no React 19 support, and the vanilla build avoids the peer-dependency fight entirely while rendering identically. Lazy-loaded, so three.js stays out of the shared bundle. |
 | Auth + DB + storage | **Supabase** (recommended) | Postgres makes the stats layer trivial, Row Level Security fixes the "anyone can overwrite any globe" hole declaratively, and auth and storage come in the same box. |
 | Payments | Paddle, Lemon Squeezy or Polar | Merchant of record; see 6 and 10. |
 | Hosting | Vercel | Already there. |
@@ -319,11 +319,12 @@ Delete on the way: `server/`, the Bootstrap and FontAwesome CDN links, and every
 
 ## 8. Phased roadmap
 
-**Phase 0 - Foundations**
-Next.js plus TypeScript plus Tailwind v4 scaffold, tokens, Geist, Phosphor, the globe ported into a client leaf with self-hosted textures, ISO alpha-3 normalization plus a test covering all 177 features.
+**Phase 0 - Foundations (done)**
+Next.js 15, TypeScript, Tailwind v4 with the token system, Geist, Phosphor, the globe as a client leaf, country data keyed on `ADM0_A3` with 7 tests covering all 177 features.
 
-**Phase 1 - The share loop**
-`/build` anonymous editor, `/@handle` read-only globe, generated OG image, viewer CTA, `/:id` legacy redirects. Shippable and already better than v1.
+**Phase 1 - The share loop (mostly done)**
+Done: `/build` anonymous editor with localStorage drafts, `/g/[id]` read-only globe, generated OG image, viewer CTA, publish API, local file store behind `GlobeStore`.
+Outstanding: `/:id` legacy redirects (needs the v1 Firestore export, so it lands with Phase 2), and handles (needs auth).
 
 **Phase 2 - Accounts**
 Supabase auth, claim-your-draft flow, handle reservation, persistent editable globe, Row Level Security. Closes the two High-severity defects.
@@ -354,10 +355,19 @@ Recap video export, year in review.
 | # | Decision | Recommendation | Blocks |
 |---|---|---|---|
 | 1 | Supabase or stay on Firebase | Supabase, for the stats layer and RLS | Phase 2 |
-| 2 | Payments provider given Kazakhstan | Paddle or Lemon Squeezy or Polar; Stripe is not available | Phase 5 |
+| 2 | ~~Payments provider~~ | **Resolved 2026-09-08: Stripe.** Owner is UK-based. | closed |
 | 3 | Do we ship place pins, or countries only | Countries in v2.0, pins in v2.1 | Phase 4 |
 | 4 | Domain: keep `smtrvl.vercel.app` or buy a real one | Buy one. Handles in the URL are the product. | Phase 1 |
 | 5 | Migrate existing v1 globes, or let them expire | Migrate. They are the only existing users. | Phase 2 |
+
+### 10.1 Known traps
+- **globe.gl ships an inconsistent three.js tree.** In 2.46.2, `three-globe` pins three 0.171 while `three-render-objects` uses 0.186. Objects built by one are passed to the other, which calls `intersectsFrustum`, a method only 0.186 has, and the globe fails to render with a blank canvas. Fixed with an `overrides: { "three": "0.186.0" }` in `package.json`. **Do not remove that override**, and re-check it whenever globe.gl is upgraded.
+- **Satori, which renders the OG card, supports a flexbox subset only.** Any element with more than one child needs an explicit `display`, and an expression next to bare text counts as two children. Keep interpolations in single template literals.
+- **The design textures are gone on purpose.** The globe is a matte sphere plus polygons, not a photographic earth. That removes the `unpkg` runtime dependency v1 had and makes the ember countries the only thing competing for attention.
+
+### 10.2 Local development
+- Node 24 via nvm. The machine defaults to Node 17, which no current tooling supports, so the repo carries an `.nvmrc` and `nvm use` is required once per shell.
+- Phase 1 runs with **no external accounts and no Docker**: drafts live in `localStorage`, published globes in a local JSON file store behind a `GlobeStore` interface. Supabase implements the same interface in Phase 2 without touching UI code.
 
 ---
 
@@ -365,3 +375,5 @@ Recap video export, year in review.
 | Date | Change |
 |---|---|
 | 2026-09-08 | Initial plan. Audit of v1, v2 thesis, visual direction, stack, roadmap. |
+| 2026-09-08 | Owner relocated to the UK. Payments decision closed: Stripe direct, no merchant of record. Added local-development constraints. |
+| 2026-09-08 | Phase 0 and most of Phase 1 built. Globe switched from react-globe.gl to vanilla globe.gl. Country key settled on `ADM0_A3`. Known traps recorded in 10.1. |

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Placeholder mark: a globe with one meridian. Replaced by the real logo in Phase 3. -->
+  <rect width="32" height="32" rx="7" fill="#070a12"/>
+  <circle cx="16" cy="16" r="9" fill="none" stroke="#f0a13b" stroke-width="2.2"/>
+  <ellipse cx="16" cy="16" rx="4" ry="9" fill="none" stroke="#f0a13b" stroke-width="1.6" opacity="0.75"/>
+  <path d="M7.4 16h17.2" stroke="#f0a13b" stroke-width="1.6" opacity="0.75"/>
+</svg>

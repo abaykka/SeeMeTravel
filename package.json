@@ -1,64 +1,36 @@
 {
-  "name": "earth",
-  "version": "0.1.0",
+  "name": "seemetravel",
+  "version": "2.0.0",
   "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-brands": "^5.0.13",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
-    "@mui/material": "^5.9.3",
-    "@react-three/drei": "^7.27.5",
-    "@react-three/fiber": "^7.0.29",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^12.1.1",
-    "@testing-library/user-event": "^12.5.0",
-    "alphanumeric": "^1.1.3",
-    "confetti-js": "^0.0.18",
-    "country-coords": "^1.0.0",
-    "d3": "^7.5.0",
-    "firebase": "^9.9.0",
-    "iso-3166-1-alpha-2": "^1.0.0",
-    "latitude-longitude": "^1.1.1",
-    "react": "^17.0.2",
-    "react-custom-scroll": "^4.4.0",
-    "react-dom": "^17.0.2",
-    "react-globe.gl": "^2.22.1",
-    "react-modal-image-responsive": "^1.1.1",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "react-select": "^5.4.0",
-    "react-select-country-list": "^2.2.3",
-    "react-toastify": "^9.0.7",
-    "reactjs-popup": "^2.0.5",
-    "styled-components": "^5.3.0",
-    "three": "^0.133.0",
-    "uuid": "^8.3.2",
-    "web-vitals": "^2.1.4"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test:countries": "node --test tests/countries.test.mjs",
+    "countries": "node scripts/prepare-countries.mjs",
+    "seed": "node scripts/seed.mjs",
+    "setup": "node scripts/prepare-countries.mjs && node scripts/seed.mjs"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "geist": "^1.7.2",
+    "globe.gl": "^2.35.0",
+    "motion": "^12.0.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "overrides": {
+    "three": "0.186.0"
   }
 }

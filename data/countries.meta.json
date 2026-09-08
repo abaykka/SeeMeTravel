@@ -1,0 +1,1772 @@
+{
+  "AFG": {
+    "id": "AFG",
+    "name": "Afghanistan",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "AF",
+    "iso3": "AFG",
+    "lat": 33.8564,
+    "lng": 66.0867
+  },
+  "AGO": {
+    "id": "AGO",
+    "name": "Angola",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "AO",
+    "iso3": "AGO",
+    "lat": -12.2916,
+    "lng": 17.5029
+  },
+  "ALB": {
+    "id": "ALB",
+    "name": "Albania",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "AL",
+    "iso3": "ALB",
+    "lat": 41.1414,
+    "lng": 20.0324
+  },
+  "ARE": {
+    "id": "ARE",
+    "name": "United Arab Emirates",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "AE",
+    "iso3": "ARE",
+    "lat": 23.8686,
+    "lng": 54.2067
+  },
+  "ARG": {
+    "id": "ARG",
+    "name": "Argentina",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "AR",
+    "iso3": "ARG",
+    "lat": -35.2202,
+    "lng": -65.1495
+  },
+  "ARM": {
+    "id": "ARM",
+    "name": "Armenia",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "AM",
+    "iso3": "ARM",
+    "lat": 40.2166,
+    "lng": 45.0003
+  },
+  "ATA": {
+    "id": "ATA",
+    "name": "Antarctica",
+    "continent": "Antarctica",
+    "region": "Antarctica",
+    "iso2": "AQ",
+    "iso3": "ATA",
+    "lat": -80.5228,
+    "lng": 21.2844
+  },
+  "ATF": {
+    "id": "ATF",
+    "name": "French Southern and Antarctic Lands",
+    "continent": "Seven seas (open ocean)",
+    "region": "Seven seas (open ocean)",
+    "iso2": "TF",
+    "iso3": "ATF",
+    "lat": -49.3065,
+    "lng": 69.5316
+  },
+  "AUS": {
+    "id": "AUS",
+    "name": "Australia",
+    "continent": "Oceania",
+    "region": "Australia and New Zealand",
+    "iso2": "AU",
+    "iso3": "AUS",
+    "lat": -25.5608,
+    "lng": 134.3761
+  },
+  "AUT": {
+    "id": "AUT",
+    "name": "Austria",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "AT",
+    "iso3": "AUT",
+    "lat": 47.6139,
+    "lng": 14.0762
+  },
+  "AZE": {
+    "id": "AZE",
+    "name": "Azerbaijan",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "AZ",
+    "iso3": "AZE",
+    "lat": 40.2805,
+    "lng": 47.6806
+  },
+  "BDI": {
+    "id": "BDI",
+    "name": "Burundi",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "BI",
+    "iso3": "BDI",
+    "lat": -3.3774,
+    "lng": 29.9139
+  },
+  "BEL": {
+    "id": "BEL",
+    "name": "Belgium",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "BE",
+    "iso3": "BEL",
+    "lat": 50.6524,
+    "lng": 4.5808
+  },
+  "BEN": {
+    "id": "BEN",
+    "name": "Benin",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "BJ",
+    "iso3": "BEN",
+    "lat": 9.6474,
+    "lng": 2.3374
+  },
+  "BFA": {
+    "id": "BFA",
+    "name": "Burkina Faso",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "BF",
+    "iso3": "BFA",
+    "lat": 12.3117,
+    "lng": -1.7765
+  },
+  "BGD": {
+    "id": "BGD",
+    "name": "Bangladesh",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "BD",
+    "iso3": "BGD",
+    "lat": 23.8395,
+    "lng": 90.2679
+  },
+  "BGR": {
+    "id": "BGR",
+    "name": "Bulgaria",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "BG",
+    "iso3": "BGR",
+    "lat": 42.7531,
+    "lng": 25.1951
+  },
+  "BHS": {
+    "id": "BHS",
+    "name": "The Bahamas",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "BS",
+    "iso3": "BHS",
+    "lat": 24.5064,
+    "lng": -77.9158
+  },
+  "BIH": {
+    "id": "BIH",
+    "name": "Bosnia and Herzegovina",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "BA",
+    "iso3": "BIH",
+    "lat": 44.1808,
+    "lng": 17.8169
+  },
+  "BLR": {
+    "id": "BLR",
+    "name": "Belarus",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "BY",
+    "iso3": "BLR",
+    "lat": 53.5063,
+    "lng": 27.9814
+  },
+  "BLZ": {
+    "id": "BLZ",
+    "name": "Belize",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "BZ",
+    "iso3": "BLZ",
+    "lat": 17.1971,
+    "lng": -88.7034
+  },
+  "BOL": {
+    "id": "BOL",
+    "name": "Bolivia",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "BO",
+    "iso3": "BOL",
+    "lat": -16.729,
+    "lng": -64.6414
+  },
+  "BRA": {
+    "id": "BRA",
+    "name": "Brazil",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "BR",
+    "iso3": "BRA",
+    "lat": -10.8068,
+    "lng": -53.0543
+  },
+  "BRN": {
+    "id": "BRN",
+    "name": "Brunei",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "BN",
+    "iso3": "BRN",
+    "lat": 4.6903,
+    "lng": 114.9151
+  },
+  "BTN": {
+    "id": "BTN",
+    "name": "Bhutan",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "BT",
+    "iso3": "BTN",
+    "lat": 27.428,
+    "lng": 90.4724
+  },
+  "BWA": {
+    "id": "BWA",
+    "name": "Botswana",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "iso2": "BW",
+    "iso3": "BWA",
+    "lat": -22.0997,
+    "lng": 23.7731
+  },
+  "CAF": {
+    "id": "CAF",
+    "name": "Central African Republic",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "CF",
+    "iso3": "CAF",
+    "lat": 6.5428,
+    "lng": 20.3743
+  },
+  "CAN": {
+    "id": "CAN",
+    "name": "Canada",
+    "continent": "North America",
+    "region": "Northern America",
+    "iso2": "CA",
+    "iso3": "CAN",
+    "lat": 57.7488,
+    "lng": -101.5698
+  },
+  "CHE": {
+    "id": "CHE",
+    "name": "Switzerland",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "CH",
+    "iso3": "CHE",
+    "lat": 46.7917,
+    "lng": 8.1183
+  },
+  "CHL": {
+    "id": "CHL",
+    "name": "Chile",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "CL",
+    "iso3": "CHL",
+    "lat": -37.3418,
+    "lng": -71.6709
+  },
+  "CHN": {
+    "id": "CHN",
+    "name": "China",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "CN",
+    "iso3": "CHN",
+    "lat": 36.6094,
+    "lng": 103.8654
+  },
+  "CIV": {
+    "id": "CIV",
+    "name": "Ivory Coast",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "CI",
+    "iso3": "CIV",
+    "lat": 7.5538,
+    "lng": -5.612
+  },
+  "CMR": {
+    "id": "CMR",
+    "name": "Cameroon",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "CM",
+    "iso3": "CMR",
+    "lat": 5.6631,
+    "lng": 12.6116
+  },
+  "COD": {
+    "id": "COD",
+    "name": "Democratic Republic of the Congo",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "CD",
+    "iso3": "COD",
+    "lat": -2.8503,
+    "lng": 23.583
+  },
+  "COG": {
+    "id": "COG",
+    "name": "Republic of the Congo",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "CG",
+    "iso3": "COG",
+    "lat": -0.8378,
+    "lng": 15.1345
+  },
+  "COL": {
+    "id": "COL",
+    "name": "Colombia",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "CO",
+    "iso3": "COL",
+    "lat": 3.9272,
+    "lng": -73.0777
+  },
+  "CRI": {
+    "id": "CRI",
+    "name": "Costa Rica",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "CR",
+    "iso3": "CRI",
+    "lat": 9.9657,
+    "lng": -84.1754
+  },
+  "CUB": {
+    "id": "CUB",
+    "name": "Cuba",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "CU",
+    "iso3": "CUB",
+    "lat": 21.6318,
+    "lng": -78.9607
+  },
+  "CYN": {
+    "id": "CYN",
+    "name": "Northern Cyprus",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": null,
+    "iso3": null,
+    "lat": 35.274,
+    "lng": 33.5583
+  },
+  "CYP": {
+    "id": "CYP",
+    "name": "Cyprus",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "CY",
+    "iso3": "CYP",
+    "lat": 34.9071,
+    "lng": 33.0396
+  },
+  "CZE": {
+    "id": "CZE",
+    "name": "Czechia",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "CZ",
+    "iso3": "CZE",
+    "lat": 49.7752,
+    "lng": 15.3346
+  },
+  "DEU": {
+    "id": "DEU",
+    "name": "Germany",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "DE",
+    "iso3": "DEU",
+    "lat": 51.1337,
+    "lng": 10.2885
+  },
+  "DJI": {
+    "id": "DJI",
+    "name": "Djibouti",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "DJ",
+    "iso3": "DJI",
+    "lat": 11.773,
+    "lng": 42.498
+  },
+  "DNK": {
+    "id": "DNK",
+    "name": "Denmark",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "DK",
+    "iso3": "DNK",
+    "lat": 56.2196,
+    "lng": 9.3108
+  },
+  "DOM": {
+    "id": "DOM",
+    "name": "Dominican Republic",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "DO",
+    "iso3": "DOM",
+    "lat": 18.8845,
+    "lng": -70.4624
+  },
+  "DZA": {
+    "id": "DZA",
+    "name": "Algeria",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "DZ",
+    "iso3": "DZA",
+    "lat": 28.1855,
+    "lng": 2.598
+  },
+  "ECU": {
+    "id": "ECU",
+    "name": "Ecuador",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "EC",
+    "iso3": "ECU",
+    "lat": -1.4548,
+    "lng": -78.3842
+  },
+  "EGY": {
+    "id": "EGY",
+    "name": "Egypt",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "EG",
+    "iso3": "EGY",
+    "lat": 26.5066,
+    "lng": 29.8445
+  },
+  "ERI": {
+    "id": "ERI",
+    "name": "Eritrea",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "ER",
+    "iso3": "ERI",
+    "lat": 15.4273,
+    "lng": 38.6782
+  },
+  "ESP": {
+    "id": "ESP",
+    "name": "Spain",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "ES",
+    "iso3": "ESP",
+    "lat": 40.3487,
+    "lng": -3.617
+  },
+  "EST": {
+    "id": "EST",
+    "name": "Estonia",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "EE",
+    "iso3": "EST",
+    "lat": 58.6437,
+    "lng": 25.8247
+  },
+  "ETH": {
+    "id": "ETH",
+    "name": "Ethiopia",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "ET",
+    "iso3": "ETH",
+    "lat": 8.654,
+    "lng": 39.5513
+  },
+  "FIN": {
+    "id": "FIN",
+    "name": "Finland",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "FI",
+    "iso3": "FIN",
+    "lat": 64.5041,
+    "lng": 26.2118
+  },
+  "FJI": {
+    "id": "FJI",
+    "name": "Fiji",
+    "continent": "Oceania",
+    "region": "Melanesia",
+    "iso2": "FJ",
+    "iso3": "FJI",
+    "lat": -17.8309,
+    "lng": 177.9971
+  },
+  "FLK": {
+    "id": "FLK",
+    "name": "Falkland Islands",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "FK",
+    "iso3": "FLK",
+    "lat": -51.7132,
+    "lng": -59.421
+  },
+  "FRA": {
+    "id": "FRA",
+    "name": "France",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "FR",
+    "iso3": null,
+    "lat": 46.6065,
+    "lng": 2.3391
+  },
+  "GAB": {
+    "id": "GAB",
+    "name": "Gabon",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "GA",
+    "iso3": "GAB",
+    "lat": -0.647,
+    "lng": 11.6878
+  },
+  "GBR": {
+    "id": "GBR",
+    "name": "United Kingdom",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "GB",
+    "iso3": "GBR",
+    "lat": 53.8834,
+    "lng": -2.658
+  },
+  "GEO": {
+    "id": "GEO",
+    "name": "Georgia",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "GE",
+    "iso3": "GEO",
+    "lat": 42.162,
+    "lng": 43.4815
+  },
+  "GHA": {
+    "id": "GHA",
+    "name": "Ghana",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "GH",
+    "iso3": "GHA",
+    "lat": 7.9287,
+    "lng": -1.237
+  },
+  "GIN": {
+    "id": "GIN",
+    "name": "Guinea",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "GN",
+    "iso3": "GIN",
+    "lat": 10.4483,
+    "lng": -11.0609
+  },
+  "GMB": {
+    "id": "GMB",
+    "name": "Gambia",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "GM",
+    "iso3": "GMB",
+    "lat": 13.4753,
+    "lng": -15.4319
+  },
+  "GNB": {
+    "id": "GNB",
+    "name": "Guinea-Bissau",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "GW",
+    "iso3": "GNB",
+    "lat": 12.0227,
+    "lng": -15.1106
+  },
+  "GNQ": {
+    "id": "GNQ",
+    "name": "Equatorial Guinea",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "GQ",
+    "iso3": "GNQ",
+    "lat": 1.6459,
+    "lng": 10.366
+  },
+  "GRC": {
+    "id": "GRC",
+    "name": "Greece",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "GR",
+    "iso3": "GRC",
+    "lat": 39.3417,
+    "lng": 22.5639
+  },
+  "GRL": {
+    "id": "GRL",
+    "name": "Greenland",
+    "continent": "North America",
+    "region": "Northern America",
+    "iso2": "GL",
+    "iso3": "GRL",
+    "lat": 74.7705,
+    "lng": -41.5002
+  },
+  "GTM": {
+    "id": "GTM",
+    "name": "Guatemala",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "GT",
+    "iso3": "GTM",
+    "lat": 15.6994,
+    "lng": -90.3695
+  },
+  "GUY": {
+    "id": "GUY",
+    "name": "Guyana",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "GY",
+    "iso3": "GUY",
+    "lat": 4.7902,
+    "lng": -58.9712
+  },
+  "HND": {
+    "id": "HND",
+    "name": "Honduras",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "HN",
+    "iso3": "HND",
+    "lat": 14.8229,
+    "lng": -86.59
+  },
+  "HRV": {
+    "id": "HRV",
+    "name": "Croatia",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "HR",
+    "iso3": "HRV",
+    "lat": 45.0162,
+    "lng": 16.5662
+  },
+  "HTI": {
+    "id": "HTI",
+    "name": "Haiti",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "HT",
+    "iso3": "HTI",
+    "lat": 18.9007,
+    "lng": -72.658
+  },
+  "HUN": {
+    "id": "HUN",
+    "name": "Hungary",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "HU",
+    "iso3": "HUN",
+    "lat": 47.2,
+    "lng": 19.3576
+  },
+  "IDN": {
+    "id": "IDN",
+    "name": "Indonesia",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "ID",
+    "iso3": "IDN",
+    "lat": -0.2543,
+    "lng": 114.0227
+  },
+  "IND": {
+    "id": "IND",
+    "name": "India",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "IN",
+    "iso3": "IND",
+    "lat": 22.925,
+    "lng": 79.5937
+  },
+  "IRL": {
+    "id": "IRL",
+    "name": "Ireland",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "IE",
+    "iso3": "IRL",
+    "lat": 53.1806,
+    "lng": -8.0102
+  },
+  "IRN": {
+    "id": "IRN",
+    "name": "Iran",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "IR",
+    "iso3": "IRN",
+    "lat": 32.5189,
+    "lng": 54.2855
+  },
+  "IRQ": {
+    "id": "IRQ",
+    "name": "Iraq",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "IQ",
+    "iso3": "IRQ",
+    "lat": 33.0368,
+    "lng": 43.7569
+  },
+  "ISL": {
+    "id": "ISL",
+    "name": "Iceland",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "IS",
+    "iso3": "ISL",
+    "lat": 65.0743,
+    "lng": -18.761
+  },
+  "ISR": {
+    "id": "ISR",
+    "name": "Israel",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "IL",
+    "iso3": "ISR",
+    "lat": 31.4849,
+    "lng": 35.0039
+  },
+  "ITA": {
+    "id": "ITA",
+    "name": "Italy",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "IT",
+    "iso3": "ITA",
+    "lat": 43.4725,
+    "lng": 12.2195
+  },
+  "JAM": {
+    "id": "JAM",
+    "name": "Jamaica",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "JM",
+    "iso3": "JAM",
+    "lat": 18.1376,
+    "lng": -77.3243
+  },
+  "JOR": {
+    "id": "JOR",
+    "name": "Jordan",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "JO",
+    "iso3": "JOR",
+    "lat": 31.2455,
+    "lng": 36.7795
+  },
+  "JPN": {
+    "id": "JPN",
+    "name": "Japan",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "JP",
+    "iso3": "JPN",
+    "lat": 36.0191,
+    "lng": 136.8819
+  },
+  "KAZ": {
+    "id": "KAZ",
+    "name": "Kazakhstan",
+    "continent": "Asia",
+    "region": "Central Asia",
+    "iso2": "KZ",
+    "iso3": "KAZ",
+    "lat": 48.1917,
+    "lng": 67.2846
+  },
+  "KEN": {
+    "id": "KEN",
+    "name": "Kenya",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "KE",
+    "iso3": "KEN",
+    "lat": 0.596,
+    "lng": 37.7916
+  },
+  "KGZ": {
+    "id": "KGZ",
+    "name": "Kyrgyzstan",
+    "continent": "Asia",
+    "region": "Central Asia",
+    "iso2": "KG",
+    "iso3": "KGZ",
+    "lat": 41.5069,
+    "lng": 74.6204
+  },
+  "KHM": {
+    "id": "KHM",
+    "name": "Cambodia",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "KH",
+    "iso3": "KHM",
+    "lat": 12.6847,
+    "lng": 104.8761
+  },
+  "KOR": {
+    "id": "KOR",
+    "name": "South Korea",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "KR",
+    "iso3": "KOR",
+    "lat": 36.4276,
+    "lng": 127.8213
+  },
+  "KOS": {
+    "id": "KOS",
+    "name": "Kosovo",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "XK",
+    "iso3": "XKX",
+    "lat": 42.5794,
+    "lng": 20.8954
+  },
+  "KWT": {
+    "id": "KWT",
+    "name": "Kuwait",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "KW",
+    "iso3": "KWT",
+    "lat": 29.3073,
+    "lng": 47.6001
+  },
+  "LAO": {
+    "id": "LAO",
+    "name": "Laos",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "LA",
+    "iso3": "LAO",
+    "lat": 18.445,
+    "lng": 103.7503
+  },
+  "LBN": {
+    "id": "LBN",
+    "name": "Lebanon",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "LB",
+    "iso3": "LBN",
+    "lat": 33.9118,
+    "lng": 35.871
+  },
+  "LBR": {
+    "id": "LBR",
+    "name": "Liberia",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "LR",
+    "iso3": "LBR",
+    "lat": 6.4316,
+    "lng": -9.4108
+  },
+  "LBY": {
+    "id": "LBY",
+    "name": "Libya",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "LY",
+    "iso3": "LBY",
+    "lat": 26.9975,
+    "lng": 17.9744
+  },
+  "LKA": {
+    "id": "LKA",
+    "name": "Sri Lanka",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "LK",
+    "iso3": "LKA",
+    "lat": 7.7005,
+    "lng": 80.6672
+  },
+  "LSO": {
+    "id": "LSO",
+    "name": "Lesotho",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "iso2": "LS",
+    "iso3": "LSO",
+    "lat": -29.6253,
+    "lng": 28.1701
+  },
+  "LTU": {
+    "id": "LTU",
+    "name": "Lithuania",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "LT",
+    "iso3": "LTU",
+    "lat": 55.2843,
+    "lng": 23.8806
+  },
+  "LUX": {
+    "id": "LUX",
+    "name": "Luxembourg",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "LU",
+    "iso3": "LUX",
+    "lat": 49.7657,
+    "lng": 5.9652
+  },
+  "LVA": {
+    "id": "LVA",
+    "name": "Latvia",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "LV",
+    "iso3": "LVA",
+    "lat": 56.8072,
+    "lng": 24.8333
+  },
+  "MAR": {
+    "id": "MAR",
+    "name": "Morocco",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "MA",
+    "iso3": "MAR",
+    "lat": 29.8854,
+    "lng": -8.4205
+  },
+  "MDA": {
+    "id": "MDA",
+    "name": "Moldova",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "MD",
+    "iso3": "MDA",
+    "lat": 47.2037,
+    "lng": 28.4105
+  },
+  "MDG": {
+    "id": "MDG",
+    "name": "Madagascar",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "MG",
+    "iso3": "MDG",
+    "lat": -19.3561,
+    "lng": 46.6912
+  },
+  "MEX": {
+    "id": "MEX",
+    "name": "Mexico",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "MX",
+    "iso3": "MEX",
+    "lat": 23.9354,
+    "lng": -102.5763
+  },
+  "MKD": {
+    "id": "MKD",
+    "name": "Macedonia",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "MK",
+    "iso3": "MKD",
+    "lat": 41.6059,
+    "lng": 21.6979
+  },
+  "MLI": {
+    "id": "MLI",
+    "name": "Mali",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "ML",
+    "iso3": "MLI",
+    "lat": 17.2678,
+    "lng": -3.5433
+  },
+  "MMR": {
+    "id": "MMR",
+    "name": "Myanmar",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "MM",
+    "iso3": "MMR",
+    "lat": 21.017,
+    "lng": 96.5058
+  },
+  "MNE": {
+    "id": "MNE",
+    "name": "Montenegro",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "ME",
+    "iso3": "MNE",
+    "lat": 42.789,
+    "lng": 19.2862
+  },
+  "MNG": {
+    "id": "MNG",
+    "name": "Mongolia",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "MN",
+    "iso3": "MNG",
+    "lat": 46.8237,
+    "lng": 102.9464
+  },
+  "MOZ": {
+    "id": "MOZ",
+    "name": "Mozambique",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "MZ",
+    "iso3": "MOZ",
+    "lat": -17.2304,
+    "lng": 35.4726
+  },
+  "MRT": {
+    "id": "MRT",
+    "name": "Mauritania",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "MR",
+    "iso3": "MRT",
+    "lat": 20.2093,
+    "lng": -10.3264
+  },
+  "MWI": {
+    "id": "MWI",
+    "name": "Malawi",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "MW",
+    "iso3": "MWI",
+    "lat": -13.1728,
+    "lng": 34.1936
+  },
+  "MYS": {
+    "id": "MYS",
+    "name": "Malaysia",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "MY",
+    "iso3": "MYS",
+    "lat": 3.5481,
+    "lng": 114.6755
+  },
+  "NAM": {
+    "id": "NAM",
+    "name": "Namibia",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "iso2": "NA",
+    "iso3": "NAM",
+    "lat": -22.0998,
+    "lng": 17.1562
+  },
+  "NCL": {
+    "id": "NCL",
+    "name": "New Caledonia",
+    "continent": "Oceania",
+    "region": "Melanesia",
+    "iso2": "NC",
+    "iso3": "NCL",
+    "lat": -21.2614,
+    "lng": 165.5345
+  },
+  "NER": {
+    "id": "NER",
+    "name": "Niger",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "NE",
+    "iso3": "NER",
+    "lat": 17.3456,
+    "lng": 9.3244
+  },
+  "NGA": {
+    "id": "NGA",
+    "name": "Nigeria",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "NG",
+    "iso3": "NGA",
+    "lat": 9.5483,
+    "lng": 7.9951
+  },
+  "NIC": {
+    "id": "NIC",
+    "name": "Nicaragua",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "NI",
+    "iso3": "NIC",
+    "lat": 12.8482,
+    "lng": -85.0203
+  },
+  "NLD": {
+    "id": "NLD",
+    "name": "Netherlands",
+    "continent": "Europe",
+    "region": "Western Europe",
+    "iso2": "NL",
+    "iso3": "NLD",
+    "lat": 52.2987,
+    "lng": 5.5122
+  },
+  "NOR": {
+    "id": "NOR",
+    "name": "Norway",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "NO",
+    "iso3": null,
+    "lat": 64.5365,
+    "lng": 14.2448
+  },
+  "NPL": {
+    "id": "NPL",
+    "name": "Nepal",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "NP",
+    "iso3": "NPL",
+    "lat": 28.2394,
+    "lng": 84.0132
+  },
+  "NZL": {
+    "id": "NZL",
+    "name": "New Zealand",
+    "continent": "Oceania",
+    "region": "Australia and New Zealand",
+    "iso2": "NZ",
+    "iso3": "NZL",
+    "lat": -43.9858,
+    "lng": 170.513
+  },
+  "OMN": {
+    "id": "OMN",
+    "name": "Oman",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "OM",
+    "iso3": "OMN",
+    "lat": 20.5811,
+    "lng": 56.0976
+  },
+  "PAK": {
+    "id": "PAK",
+    "name": "Pakistan",
+    "continent": "Asia",
+    "region": "Southern Asia",
+    "iso2": "PK",
+    "iso3": "PAK",
+    "lat": 29.9735,
+    "lng": 69.414
+  },
+  "PAN": {
+    "id": "PAN",
+    "name": "Panama",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "PA",
+    "iso3": "PAN",
+    "lat": 8.53,
+    "lng": -80.1092
+  },
+  "PER": {
+    "id": "PER",
+    "name": "Peru",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "PE",
+    "iso3": "PER",
+    "lat": -9.1916,
+    "lng": -74.3918
+  },
+  "PHL": {
+    "id": "PHL",
+    "name": "Philippines",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "PH",
+    "iso3": "PHL",
+    "lat": 15.7509,
+    "lng": 121.5444
+  },
+  "PNG": {
+    "id": "PNG",
+    "name": "Papua New Guinea",
+    "continent": "Oceania",
+    "region": "Melanesia",
+    "iso2": "PG",
+    "iso3": "PNG",
+    "lat": -6.645,
+    "lng": 144.3312
+  },
+  "POL": {
+    "id": "POL",
+    "name": "Poland",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "PL",
+    "iso3": "POL",
+    "lat": 52.1483,
+    "lng": 19.311
+  },
+  "PRI": {
+    "id": "PRI",
+    "name": "Puerto Rico",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "PR",
+    "iso3": "PRI",
+    "lat": 18.2372,
+    "lng": -66.4792
+  },
+  "PRK": {
+    "id": "PRK",
+    "name": "North Korea",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "KP",
+    "iso3": "PRK",
+    "lat": 40.143,
+    "lng": 127.165
+  },
+  "PRT": {
+    "id": "PRT",
+    "name": "Portugal",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "PT",
+    "iso3": "PRT",
+    "lat": 39.634,
+    "lng": -8.0558
+  },
+  "PRY": {
+    "id": "PRY",
+    "name": "Paraguay",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "PY",
+    "iso3": "PRY",
+    "lat": -23.248,
+    "lng": -58.3874
+  },
+  "PSX": {
+    "id": "PSX",
+    "name": "Palestine",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "PS",
+    "iso3": "PSE",
+    "lat": 31.9411,
+    "lng": 35.2733
+  },
+  "QAT": {
+    "id": "QAT",
+    "name": "Qatar",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "QA",
+    "iso3": "QAT",
+    "lat": 25.3219,
+    "lng": 51.1835
+  },
+  "ROU": {
+    "id": "ROU",
+    "name": "Romania",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "RO",
+    "iso3": "ROU",
+    "lat": 45.8571,
+    "lng": 24.9433
+  },
+  "RUS": {
+    "id": "RUS",
+    "name": "Russia",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "RU",
+    "iso3": "RUS",
+    "lat": 61.6926,
+    "lng": 99.2165
+  },
+  "RWA": {
+    "id": "RWA",
+    "name": "Rwanda",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "RW",
+    "iso3": "RWA",
+    "lat": -2.0135,
+    "lng": 29.919
+  },
+  "SAH": {
+    "id": "SAH",
+    "name": "Western Sahara",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "EH",
+    "iso3": "ESH",
+    "lat": 24.2912,
+    "lng": -12.1378
+  },
+  "SAU": {
+    "id": "SAU",
+    "name": "Saudi Arabia",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "SA",
+    "iso3": "SAU",
+    "lat": 24.1233,
+    "lng": 44.5164
+  },
+  "SDN": {
+    "id": "SDN",
+    "name": "Sudan",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "SD",
+    "iso3": "SDN",
+    "lat": 15.9906,
+    "lng": 29.8626
+  },
+  "SDS": {
+    "id": "SDS",
+    "name": "South Sudan",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "SS",
+    "iso3": "SSD",
+    "lat": 7.2929,
+    "lng": 30.1986
+  },
+  "SEN": {
+    "id": "SEN",
+    "name": "Senegal",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "SN",
+    "iso3": "SEN",
+    "lat": 14.3541,
+    "lng": -14.5098
+  },
+  "SLB": {
+    "id": "SLB",
+    "name": "Solomon Islands",
+    "continent": "Oceania",
+    "region": "Melanesia",
+    "iso2": "SB",
+    "iso3": "SLB",
+    "lat": -7.9021,
+    "lng": 159.1025
+  },
+  "SLE": {
+    "id": "SLE",
+    "name": "Sierra Leone",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "SL",
+    "iso3": "SLE",
+    "lat": 8.5304,
+    "lng": -11.7953
+  },
+  "SLV": {
+    "id": "SLV",
+    "name": "El Salvador",
+    "continent": "North America",
+    "region": "Central America",
+    "iso2": "SV",
+    "iso3": "SLV",
+    "lat": 13.7261,
+    "lng": -88.8729
+  },
+  "SOL": {
+    "id": "SOL",
+    "name": "Somaliland",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": null,
+    "iso3": null,
+    "lat": 9.758,
+    "lng": 46.2307
+  },
+  "SOM": {
+    "id": "SOM",
+    "name": "Somalia",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "SO",
+    "iso3": "SOM",
+    "lat": 4.7523,
+    "lng": 45.7267
+  },
+  "SRB": {
+    "id": "SRB",
+    "name": "Republic of Serbia",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "RS",
+    "iso3": "SRB",
+    "lat": 44.233,
+    "lng": 20.8197
+  },
+  "SUR": {
+    "id": "SUR",
+    "name": "Suriname",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "SR",
+    "iso3": "SUR",
+    "lat": 4.1204,
+    "lng": -55.9123
+  },
+  "SVK": {
+    "id": "SVK",
+    "name": "Slovakia",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "SK",
+    "iso3": "SVK",
+    "lat": 48.7267,
+    "lng": 19.5077
+  },
+  "SVN": {
+    "id": "SVN",
+    "name": "Slovenia",
+    "continent": "Europe",
+    "region": "Southern Europe",
+    "iso2": "SI",
+    "iso3": "SVN",
+    "lat": 46.1254,
+    "lng": 14.9382
+  },
+  "SWE": {
+    "id": "SWE",
+    "name": "Sweden",
+    "continent": "Europe",
+    "region": "Northern Europe",
+    "iso2": "SE",
+    "iso3": "SWE",
+    "lat": 62.8115,
+    "lng": 16.5963
+  },
+  "SWZ": {
+    "id": "SWZ",
+    "name": "Swaziland",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "iso2": "SZ",
+    "iso3": "SWZ",
+    "lat": -26.4899,
+    "lng": 31.3953
+  },
+  "SYR": {
+    "id": "SYR",
+    "name": "Syria",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "SY",
+    "iso3": "SYR",
+    "lat": 35.0126,
+    "lng": 38.5442
+  },
+  "TCD": {
+    "id": "TCD",
+    "name": "Chad",
+    "continent": "Africa",
+    "region": "Middle Africa",
+    "iso2": "TD",
+    "iso3": "TCD",
+    "lat": 15.3289,
+    "lng": 18.5813
+  },
+  "TGO": {
+    "id": "TGO",
+    "name": "Togo",
+    "continent": "Africa",
+    "region": "Western Africa",
+    "iso2": "TG",
+    "iso3": "TGO",
+    "lat": 8.4395,
+    "lng": 0.9964
+  },
+  "THA": {
+    "id": "THA",
+    "name": "Thailand",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "TH",
+    "iso3": "THA",
+    "lat": 15.017,
+    "lng": 101.0061
+  },
+  "TJK": {
+    "id": "TJK",
+    "name": "Tajikistan",
+    "continent": "Asia",
+    "region": "Central Asia",
+    "iso2": "TJ",
+    "iso3": "TJK",
+    "lat": 38.5831,
+    "lng": 71.0344
+  },
+  "TKM": {
+    "id": "TKM",
+    "name": "Turkmenistan",
+    "continent": "Asia",
+    "region": "Central Asia",
+    "iso2": "TM",
+    "iso3": "TKM",
+    "lat": 39.0912,
+    "lng": 59.2754
+  },
+  "TLS": {
+    "id": "TLS",
+    "name": "East Timor",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "TL",
+    "iso3": "TLS",
+    "lat": -8.7678,
+    "lng": 125.9663
+  },
+  "TTO": {
+    "id": "TTO",
+    "name": "Trinidad and Tobago",
+    "continent": "North America",
+    "region": "Caribbean",
+    "iso2": "TT",
+    "iso3": "TTO",
+    "lat": 10.4282,
+    "lng": -61.3304
+  },
+  "TUN": {
+    "id": "TUN",
+    "name": "Tunisia",
+    "continent": "Africa",
+    "region": "Northern Africa",
+    "iso2": "TN",
+    "iso3": "TUN",
+    "lat": 34.1729,
+    "lng": 9.5347
+  },
+  "TUR": {
+    "id": "TUR",
+    "name": "Turkey",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "TR",
+    "iso3": "TUR",
+    "lat": 38.9907,
+    "lng": 35.3921
+  },
+  "TWN": {
+    "id": "TWN",
+    "name": "Taiwan",
+    "continent": "Asia",
+    "region": "Eastern Asia",
+    "iso2": "TW",
+    "iso3": "TWN",
+    "lat": 23.741,
+    "lng": 120.9748
+  },
+  "TZA": {
+    "id": "TZA",
+    "name": "United Republic of Tanzania",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "TZ",
+    "iso3": "TZA",
+    "lat": -6.2577,
+    "lng": 34.753
+  },
+  "UGA": {
+    "id": "UGA",
+    "name": "Uganda",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "UG",
+    "iso3": "UGA",
+    "lat": 1.2955,
+    "lng": 32.3576
+  },
+  "UKR": {
+    "id": "UKR",
+    "name": "Ukraine",
+    "continent": "Europe",
+    "region": "Eastern Europe",
+    "iso2": "UA",
+    "iso3": "UKR",
+    "lat": 49.1488,
+    "lng": 31.2291
+  },
+  "URY": {
+    "id": "URY",
+    "name": "Uruguay",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "UY",
+    "iso3": "URY",
+    "lat": -32.7809,
+    "lng": -56.0033
+  },
+  "USA": {
+    "id": "USA",
+    "name": "United States of America",
+    "continent": "North America",
+    "region": "Northern America",
+    "iso2": "US",
+    "iso3": "USA",
+    "lat": 39.5016,
+    "lng": -99.0602
+  },
+  "UZB": {
+    "id": "UZB",
+    "name": "Uzbekistan",
+    "continent": "Asia",
+    "region": "Central Asia",
+    "iso2": "UZ",
+    "iso3": "UZB",
+    "lat": 41.7486,
+    "lng": 63.2036
+  },
+  "VEN": {
+    "id": "VEN",
+    "name": "Venezuela",
+    "continent": "South America",
+    "region": "South America",
+    "iso2": "VE",
+    "iso3": "VEN",
+    "lat": 7.1621,
+    "lng": -66.1638
+  },
+  "VNM": {
+    "id": "VNM",
+    "name": "Vietnam",
+    "continent": "Asia",
+    "region": "South-Eastern Asia",
+    "iso2": "VN",
+    "iso3": "VNM",
+    "lat": 16.6579,
+    "lng": 106.2858
+  },
+  "VUT": {
+    "id": "VUT",
+    "name": "Vanuatu",
+    "continent": "Oceania",
+    "region": "Melanesia",
+    "iso2": "VU",
+    "iso3": "VUT",
+    "lat": -15.2233,
+    "lng": 166.9072
+  },
+  "YEM": {
+    "id": "YEM",
+    "name": "Yemen",
+    "continent": "Asia",
+    "region": "Western Asia",
+    "iso2": "YE",
+    "iso3": "YEM",
+    "lat": 15.9132,
+    "lng": 47.535
+  },
+  "ZAF": {
+    "id": "ZAF",
+    "name": "South Africa",
+    "continent": "Africa",
+    "region": "Southern Africa",
+    "iso2": "ZA",
+    "iso3": "ZAF",
+    "lat": -28.9621,
+    "lng": 25.1174
+  },
+  "ZMB": {
+    "id": "ZMB",
+    "name": "Zambia",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "ZM",
+    "iso3": "ZMB",
+    "lat": -13.3951,
+    "lng": 27.7276
+  },
+  "ZWE": {
+    "id": "ZWE",
+    "name": "Zimbabwe",
+    "continent": "Africa",
+    "region": "Eastern Africa",
+    "iso2": "ZW",
+    "iso3": "ZWE",
+    "lat": -18.907,
+    "lng": 29.7885
+  }
+}

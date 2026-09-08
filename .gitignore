@@ -1,23 +1,32 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.js
 
-# testing
-/coverage
+# next.js
+.next/
+out/
+next-env.d.ts
 
 # production
-/build
+build/
+dist/
+
+# local data store (Phase 1 persistence, replaced by Supabase in Phase 2)
+.data/
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+*.pem
+.vercel
+*.tsbuildinfo
 
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+
+# env
+.env
+.env*.local
