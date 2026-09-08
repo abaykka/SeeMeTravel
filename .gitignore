@@ -9,11 +9,17 @@ out/
 next-env.d.ts
 
 # production
-build/
-dist/
+# Do NOT use a bare "build/" here. It is a Create React App convention and it
+# matches any directory named build at any depth, including the app/build route,
+# which silently kept the editor page out of the repo. Next.js output is .next/
+# and out/, already ignored above; the only real build directory left is v1's.
+legacy/build/
 
 # local data store (Phase 1 persistence, replaced by Supabase in Phase 2)
 .data/
+
+# claude code worktrees and local state
+.claude/
 
 # misc
 .DS_Store
