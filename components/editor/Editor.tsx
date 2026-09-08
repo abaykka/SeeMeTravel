@@ -87,13 +87,20 @@ export function Editor() {
     .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
-    <main className="relative h-[100dvh] w-full overflow-hidden">
-      <GlobeView
-        selected={selected}
-        onToggle={toggle}
-        focus={focus}
-        className="absolute inset-0"
-      />
+    /*
+      Mobile-first. On a phone this is a column: the globe owns the top of the
+      screen and the sheet flows beneath it, so the sphere is never hidden behind
+      the panel. From md up the globe goes full-bleed and the panel floats over it.
+    */
+    <main className="flex h-[100dvh] w-full flex-col overflow-hidden md:block">
+      <div className="relative h-[46dvh] shrink-0 md:absolute md:inset-0 md:h-auto">
+        <GlobeView
+          selected={selected}
+          onToggle={toggle}
+          focus={focus}
+          className="absolute inset-0"
+        />
+      </div>
 
       <header className="pointer-events-none absolute inset-x-0 top-0 z-10 flex h-16 items-center justify-between px-4 md:px-6">
         <Link
@@ -105,17 +112,14 @@ export function Editor() {
         </Link>
       </header>
 
-      {/*
-        Desktop: a panel floating over the globe on the right.
-        Mobile: a bottom sheet, so the globe keeps the top half of the screen.
-      */}
       <section
         aria-label="Globe editor"
-        className="absolute inset-x-0 bottom-0 z-10 max-h-[62dvh] overflow-y-auto border-t
-                   border-border bg-surface/85 p-4 backdrop-blur-xl
-                   md:inset-x-auto md:bottom-auto md:right-6 md:top-20 md:max-h-[calc(100dvh-7rem)]
-                   md:w-[22rem] md:rounded-card md:border md:p-5"
+        className="relative z-10 flex min-h-0 flex-1 flex-col border-t border-border
+                   bg-surface/85 backdrop-blur-xl
+                   md:absolute md:bottom-auto md:right-6 md:top-20 md:h-auto md:max-h-[calc(100dvh-7rem)]
+                   md:w-[22rem] md:flex-none md:rounded-card md:border md:p-5"
       >
+        <div className="min-h-0 flex-1 overflow-y-auto p-4 md:overflow-visible md:p-0">
         <CountryPicker selected={selectedSet} onPick={pick} />
 
         <div className="mt-5 border-t border-border pt-5">
@@ -125,8 +129,8 @@ export function Editor() {
         <div className="mt-5">
           {chips.length === 0 ? (
             <p className="text-sm leading-relaxed text-muted">
-              Click a country on the globe, or search for one above. Your progress is saved in
-              this browser as you go.
+              Select countries on the globe, or search for them above. Your progress is saved
+              in this browser as you go.
             </p>
           ) : (
             <ul className="flex flex-wrap gap-1.5">
@@ -161,17 +165,24 @@ export function Editor() {
           )}
         </div>
 
-        {error && (
-          <p role="alert" className="mt-4 text-sm text-danger">
-            {error}
-          </p>
-        )}
+          {error && (
+            <p role="alert" className="mt-4 text-sm text-danger">
+              {error}
+            </p>
+          )}
+        </div>
 
-        <div className="mt-5 border-t border-border pt-5">
+        {/* Always reachable on a phone without scrolling the sheet to its end. */}
+        <div
+          className="shrink-0 border-t border-border bg-surface/95 p-4
+                     pb-[max(1rem,env(safe-area-inset-bottom))]
+                     md:mt-5 md:bg-transparent md:p-0 md:pt-5"
+        >
           <Button
             onClick={publish}
             disabled={selected.length === 0 || publishing}
-            className="w-full"
+            size="lg"
+            className="w-full md:h-10 md:text-sm"
           >
             {publishing ? "Publishing" : "Publish and get my link"}
             {!publishing && <ArrowRightIcon size={16} aria-hidden="true" />}

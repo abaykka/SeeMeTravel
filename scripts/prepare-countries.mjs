@@ -137,10 +137,18 @@ for (const f of raw.features) {
     lng: centroid.lng,
   };
 
-  // The client only needs the key and a display name; everything else is server-side.
+  /*
+   * MAPCOLOR9 is Natural Earth's cartographic colouring field: no two countries
+   * that share a border are given the same value. We carry it through as `tint`
+   * so the globe can vary adjacent visited countries slightly and stop a region
+   * like western Europe from merging into one solid blob.
+   */
+  const tint = Math.min(Math.max(Number(p.MAPCOLOR9) - 1, 0), 8);
+
+  // The client only needs the key, a display name and the tint index.
   features.push({
     type: "Feature",
-    properties: { id, name: p.ADMIN },
+    properties: { id, name: p.ADMIN, tint },
     geometry: { type: f.geometry.type, coordinates: slimCoords(f.geometry.coordinates) },
   });
 }

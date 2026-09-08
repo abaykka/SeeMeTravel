@@ -17,16 +17,53 @@ type Props = {
   className?: string;
 };
 
+/*
+ * Nine tints of the one ember accent, indexed by the `tint` property (Natural
+ * Earth's MAPCOLOR9). Neighbouring countries always get different values, so
+ * adjacent visited countries separate without introducing a second hue. The
+ * ramp only spans 50% to 68% lightness, so it still reads as a single colour.
+ */
+const VISITED_TINTS = [
+  "#ed8712",
+  "#ee8c1d",
+  "#ef9227",
+  "#f09732",
+  "#f09c3d",
+  "#f1a247",
+  "#f2a752",
+  "#f3ad5d",
+  "#f4b267",
+];
+
 const COLORS = {
-  visited: "rgba(240, 161, 59, 0.85)",
-  visitedHover: "rgba(255, 184, 89, 0.95)",
+  visitedHover: "#ffd9a3",
   unvisited: "#141c29",
   unvisitedHover: "#1f2a3b",
-  side: "rgba(240, 161, 59, 0.15)",
-  stroke: "#0b1119",
+  // A dark bronze wall so each raised country reads as its own block.
+  side: "#5c3a10",
+  // The page background, drawn as a seam between neighbouring countries.
+  stroke: "#070a12",
   globe: "#0d1420",
   atmosphere: "#3d5a80",
 };
+
+/**
+ * Camera distance that fits the whole globe in a container of this shape.
+ *
+ * three-globe uses a 50 degree vertical field of view and a globe of radius 1
+ * in altitude units. On a portrait container the horizontal field is the
+ * limiting one, so a fixed altitude that frames nicely on a wide desktop crops
+ * the sphere badly on a phone. Deriving it from the aspect ratio is what makes
+ * the globe mobile-first rather than desktop-tuned.
+ */
+function fitAltitude(width: number, height: number): number {
+  if (!width || !height) return 2.4;
+  const vHalf = (50 / 2) * (Math.PI / 180);
+  const hHalf = Math.atan(Math.tan(vHalf) * (width / height));
+  const limiting = Math.min(vHalf, hHalf);
+  const margin = 1.3; // breathing room around the sphere
+  return Math.max(1.6, (1 / Math.sin(limiting)) * margin - 1);
+}
 
 /**
  * globe.gl is vanilla and touches WebGL and window, so it is loaded lazily on the
@@ -83,19 +120,20 @@ export default function GlobeView({ selected, onToggle, focus, className }: Prop
             if (hoverRef.current === id) {
               return isSel ? COLORS.visitedHover : COLORS.unvisitedHover;
             }
-            return isSel ? COLORS.visited : COLORS.unvisited;
+            return isSel ? VISITED_TINTS[d.properties.tint ?? 4] : COLORS.unvisited;
           })
           .polygonSideColor(() => COLORS.side)
           .polygonStrokeColor(() => COLORS.stroke)
-          .polygonLabel((d: any) => {
-            const visited = selectedRef.current.has(d.properties.id);
-            return `<div style="
+          // Name only. The colour already says whether it is visited, so labelling
+          // it again is noise.
+          .polygonLabel(
+            (d: any) => `<div style="
                 background:#0f1522;border:1px solid #212c3e;border-radius:8px;
                 padding:6px 10px;color:#e7ecf3;font-size:13px;
                 font-family:ui-sans-serif,system-ui,sans-serif;white-space:nowrap;">
-                ${d.properties.name}${visited ? ' <span style="color:#f0a13b">visited</span>' : ""}
-              </div>`;
-          })
+                ${d.properties.name}
+              </div>`
+          )
           .polygonsTransitionDuration(reduced ? 0 : 320);
 
         // A plain matte sphere instead of a photographic texture: lighter, and it
@@ -120,6 +158,10 @@ export default function GlobeView({ selected, onToggle, focus, className }: Prop
           });
         }
 
+        // Once the user drags or zooms, the camera belongs to them and resize
+        // must stop reframing it.
+        let userTookOver = false;
+
         const controls = world.controls() as any;
         controls.enableZoom = true;
         controls.minDistance = 180;
@@ -130,13 +172,24 @@ export default function GlobeView({ selected, onToggle, focus, className }: Prop
         controls.autoRotateSpeed = 0.35;
         controls.addEventListener("start", () => {
           controls.autoRotate = false;
+          userTookOver = true;
         });
 
-        world.pointOfView({ lat: 24, lng: 12, altitude: 2.4 }, 0);
+        world.pointOfView(
+          { lat: 24, lng: 12, altitude: fitAltitude(host.clientWidth, host.clientHeight) },
+          0
+        );
 
+        // Reframe on resize and orientation change, but never fight the user.
         const resize = () => {
           if (!host) return;
-          world.width(host.clientWidth).height(host.clientHeight);
+          const w = host.clientWidth;
+          const h = host.clientHeight;
+          world.width(w).height(h);
+          if (!userTookOver) {
+            const pov = world.pointOfView();
+            world.pointOfView({ ...pov, altitude: fitAltitude(w, h) }, 0);
+          }
         };
         resize();
 

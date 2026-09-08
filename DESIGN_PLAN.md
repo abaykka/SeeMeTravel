@@ -10,7 +10,21 @@ Living document. Update it whenever a decision changes; do not let it drift from
 
 ## 0. Design read
 
-> Reading this as: a consumer SaaS landing plus product surface for design-conscious travelers, with a night-cartography language, leaning toward Next.js + Tailwind v4 + Geist, restrained motion, and the 3D globe as the single hero asset.
+> Reading this as: a **mobile-first** consumer SaaS landing plus product surface for design-conscious travelers, with a night-cartography language, leaning toward Next.js + Tailwind v4 + Geist, restrained motion, and the 3D globe as the single hero asset.
+
+**Mobile is the primary target, decided 2026-09-09.** Phones are where people keep their
+photos and where a shared link is opened, so every screen is designed at 390px first and
+widened afterwards. Concretely this means:
+
+- Design and review each screen at 390x844 before looking at it on a desktop.
+- The globe gets its own box on a phone rather than sitting behind a panel; a sphere half
+  hidden under a sheet is the failure mode to avoid.
+- Camera framing is derived from the container's aspect ratio, never a fixed altitude, or
+  the globe crops badly in portrait. See `fitAltitude` in `components/globe/GlobeView.tsx`.
+- Primary actions stay reachable without scrolling a sheet to its end (sticky footer), and
+  respect `env(safe-area-inset-bottom)`.
+- Tap targets are at least 44px. Hover can never be the only way to reach information.
+- Copy avoids "click".
 
 Redesign mode: **overhaul**. Content and concept survive; the visual language, IA, data model and stack are rebuilt.
 
@@ -128,10 +142,19 @@ One accent, used identically everywhere. Rejecting the two defaults: green-for-v
 ```
 
 Globe mapping:
-- Visited polygon cap: `--accent` at 0.85, raised altitude 0.06.
+- Visited cap: one of **nine tints of the ember accent**, raised altitude 0.06.
 - Unvisited cap: `#141C29`, altitude 0.005.
-- Stroke: `#0B1119` hairline.
+- Side walls: `#5C3A10`, a dark bronze, so each raised country reads as its own block.
+- Stroke: `--bg` (`#070A12`), drawn as a seam between neighbours.
 - Place pins: `--accent-hi`, never red.
+
+**Why nine tints and not one.** A single flat fill made any cluster of neighbouring
+countries merge into one amber blob: western Europe read as a single shape rather than
+thirteen countries, which destroys the whole point of the map. The fix uses Natural Earth's
+`MAPCOLOR9` field, which guarantees no two countries sharing a border carry the same value.
+That index selects from a ramp spanning only 50% to 68% lightness at a fixed hue and
+saturation, so adjacent countries always separate while the globe still reads as one colour.
+This does not violate the one-accent rule: it is one hue, nine values.
 
 Rules: max one accent on the page; no neon glows; shadows tinted `rgba(7,10,18,...)`, never pure black.
 
@@ -253,6 +276,44 @@ Two model decisions carried from the audit:
 1. **Key countries on `ADM0_A3`, not `ISO_A2`.** The v1 crash comes from `ISO_A2: "-99"` on Norway, Northern Cyprus and Somaliland. Checked every candidate field in the bundled dataset: `ISO_A3` and `ISO_A3_EH` are worse (5 gaps, adding France and Kosovo) and `ISO_N3` has 4. **`ADM0_A3` is the only field that is complete and unique across all 177 features**, so it is the internal key. It already returns correct ISO alpha-3 for France (`FRA`) and Norway (`NOR`); only Kosovo, Northern Cyprus and Somaliland are non-ISO entities and need an explicit override map if true ISO codes are ever required externally. Ship a test asserting all 177 features resolve to a distinct key.
    Knock-on: `country-coords` and `iso-3166-1-alpha-2` both key on alpha-2 and get replaced. Take centroids from the geojson geometry instead of a second package.
 2. **Photos belong to trips or countries as a list, never a map.** v1 collapses to one photo per country on read.
+
+---
+
+## 5.1 Photos and media
+
+Not built yet. Phase 4. v1 had one photo per country, uploaded straight from a file input to
+Firebase Storage, opened in a lightbox. v2 keeps the idea and fixes the mechanics.
+
+**Storage: Supabase Storage.** Same project and same auth as the database, so a single row
+level security policy covers both the row and the file. Vercel Blob is the alternative and
+has nicer DX, but it is a second service with a second access model for no real gain here.
+
+**Upload path: signed URL, straight from the browser to storage.** Never proxy the bytes
+through a Next.js route: Vercel caps a function request body at 4.5MB, and a phone photo is
+routinely bigger than that. The route issues a signed upload URL, the browser uploads
+directly, then the client records the row.
+
+**Process on the client before uploading:**
+1. **Downscale** to roughly 2000px on the long edge. A 12MB HEIC becomes a few hundred KB,
+   which is the difference between a usable and a painful upload on mobile data.
+2. **Read the EXIF capture date first**, then **strip all remaining EXIF**. Both halves
+   matter. The capture date is what lets trips date themselves and order a timeline without
+   the user typing anything. The rest, GPS above all, must not survive: these pages are
+   public, and a holiday album that leaks the coordinates of someone's home is a serious
+   privacy failure, not a nice-to-have.
+3. Convert HEIC to JPEG or WebP, since Safari exports HEIC and other browsers cannot show it.
+
+**Where photos surface:**
+- Editor: attach to a country now, to a trip once trips exist. On mobile the entry point is
+  the native multi-select picker, which is the whole reason mobile leads.
+- Share page: tapping a lit country opens a sheet with that country's photos. Countries that
+  have photos get a subtle marker on the globe so there is a reason to tap.
+- **OG card: use the best photo as the background.** The card is currently typographic. A
+  real photograph behind the stats would make shared links far more clickable, and it costs
+  nothing extra once photos exist.
+
+**Limits are the paid tier.** Storage and egress are the main variable costs of the product,
+which is exactly why the free tier caps photos (12) and Passport does not. See section 6.
 
 ---
 
@@ -431,3 +492,4 @@ Phase 5 requires upgrading to Pro alongside the Stripe work.
 | 2026-09-08 | Phase 0 and most of Phase 1 built. Globe switched from react-globe.gl to vanilla globe.gl. Country key settled on `ADM0_A3`. Known traps recorded in 10.2. |
 | 2026-09-08 | Recorded deployment constraints (10.1) after a Vercel preview build failed. First diagnosis (`CI=true` plus ESLint) was wrong: the real cause, from the Vercel build log, is that the project is pinned to the discontinued Node 16.x, so builds are rejected before running. Also noted that the Phase 1 file store cannot run on Vercel, that Hobby blocks commercial use, and closed the domain decision. |
 | 2026-09-08 | Node set to 24.x and preset to Next.js, giving the first successful deploy since January 2023. Fixed a `.gitignore` carried from CRA whose bare `build/` pattern silently excluded `app/build/`, so the editor route was missing from the repo and 404ed on the deploy while working locally. |
+| 2026-09-09 | Mobile promoted to the primary target (section 0). Editor restructured so the globe owns its own box on phones, camera framing derived from aspect ratio, sticky primary action. Visited countries now use nine tints of the accent via `MAPCOLOR9` so neighbours stop merging into one blob. Hover label no longer says "visited". Added section 5.1 on photos. |
