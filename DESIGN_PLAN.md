@@ -372,25 +372,29 @@ first real deploy**, not an optional upgrade.
 **Live project state** (Vercel project `travel`, team `kappassovs-projects`, Hobby plan,
 read 2026-09-08):
 
-| Setting | Current | Needs to be |
+| Setting | Value | Status |
 |---|---|---|
-| Node.js version | **16.x (discontinued)** | 24.x |
-| Framework preset | create-react-app | Next.js |
+| Node.js version | 24.x | fixed 2026-09-08, was the discontinued 16.x |
+| Framework preset | Next.js | fixed 2026-09-08, was create-react-app |
 | Last successful production deploy | January 2023, commit `f01c50d` | |
 | Domains | `seemetravel.kz`, `www.seemetravel.kz`, `smtrvl.vercel.app` | |
+| Plan | Hobby | must be Pro before Phase 5 |
 
-**Why every build currently fails.** Not the code. The build is rejected before a single
-command runs:
+**What was blocking every build, now resolved.** The deploy was rejected before a single
+command ran:
 
 ```
 Found invalid or discontinued Node.js Version: "16.x".
 Please set Node.js Version to 24.x in your Project Settings to use Node.js 24.
 ```
 
-Vercel dropped Node 16 builds. This blocks **every** deploy on every branch, including
-`main`, so production cannot be redeployed until the setting changes. Production currently
-serves a build from January 2023, which is why the live site still works. Fix it in Project
-Settings, General, Node.js Version. It is a prerequisite for any further deployment work.
+Vercel dropped Node 16 builds, which blocked **every** branch including `main`. Production
+could not be redeployed at all, and the live site kept working only because it serves a
+January 2023 build. Both this and the framework preset were corrected on 2026-09-08.
+
+**Still true after the fix:** a deployed v2 cannot publish globes until Phase 2 replaces the
+file store, and `/g/wander` will 404 in any deployment because the seeded example lives in
+gitignored local state.
 
 **Separately, v1 also cannot compile under CI even once Node is fixed.** Vercel sets
 `CI=true`, and `react-scripts build` treats every ESLint warning as fatal; v1 has around 30.
